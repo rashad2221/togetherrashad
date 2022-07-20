@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         signup.setOnClickListener(this);
         sign_in = findViewById(R.id.sign_in);
         sign_in.setOnClickListener(this);
+
+        //change
     }
 
     @Override
