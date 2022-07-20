@@ -16,7 +16,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
-    EditText username, password, email;
+    EditText username, password, email, location, idNum, phoneNum;
     View signup;
     FirebaseAuth mAuth;
     @Override
@@ -26,6 +26,9 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
         email = findViewById(R.id.email);
+        location = findViewById(R.id.location);
+        idNum = findViewById(R.id.idNum);
+        phoneNum = findViewById(R.id.PhoneNum);
         signup = findViewById(R.id.signup);
         mAuth = FirebaseAuth.getInstance();
         signup.setOnClickListener(this);
