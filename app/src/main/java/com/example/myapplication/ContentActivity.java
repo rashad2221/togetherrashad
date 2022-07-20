@@ -69,16 +69,17 @@ public class ContentActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        Intent intent;
         switch (item.getItemId()) {
             case R.id.sign_out:
                 mAuth.signOut();
                 // Toast.makeText(this, "sign out", Toast.LENGTH_SHORT);
-                Intent intent = new Intent(this, SignInActivity.class);
+                intent = new Intent(this, SignInActivity.class);
                 startActivity(intent);
-
-            //case R.id.calander:
-              //  Intent intent = new Intent(this, SignInActivity.class);
-                //startActivity(intent);
+                break;
+            case R.id.calendar:
+                intent = new Intent(this, Calendar.class);
+                startActivity(intent);
             // default:
                 // return super.onOptionsItemSelected(item);
         }

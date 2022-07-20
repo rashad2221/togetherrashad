@@ -4,12 +4,17 @@
 
     <item android:id="@+id/item1"
         android:icon="@drawable/ic_icon"
-        android:title="sign ouuut"
+        android:title="sign out"
         app:showAsAction="ifRoom" />
 
     <item android:id="@+id/sign_out"
         android:icon="@drawable/ic_icon"
         android:title="Sign out"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/calendar"
+        android:icon="@drawable/ic_icon"
+        android:title="Calendar"
         app:showAsAction="never" />
 
 
