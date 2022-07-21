@@ -25,4 +25,12 @@
         app:layout_constraintTop_toBottomOf="@+id/calendarView"
         app:layout_constraintVertical_bias="0.283"
         tools:layout_editor_absoluteX="286dp" />
+
+    <TextView
+        android:id="@+id/DateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="49dp"
+        tools:layout_editor_absoluteY="574dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
