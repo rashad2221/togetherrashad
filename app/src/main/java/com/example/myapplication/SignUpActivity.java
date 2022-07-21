@@ -37,9 +37,6 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         mAuth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance("https://together-63e15-default-rtdb.europe-west1.firebasedatabase.app/");
 
-        User user = new User(username.getText().toString(), email.getText().toString(), password.getText().toString(), location.getText().toString(), idNum.getText().toString(), phoneNum.getText().toString(), birthday.getText().toString());
-        String uid = mAuth.getCurrentUser().getUid();
-        database.getReference("Users").child(uid).setValue(user);
 
         signup.setOnClickListener(this);
     }
@@ -61,16 +58,26 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
                                 // Sign in success, update UI with the signed-in user's information
+                                User user = new User(username.getText().toString(),
+                                        email,
+                                        password,
+                                        location.getText().toString(),
+                                        idNum.getText().toString(),
+                                        phoneNum.getText().toString(),
+                                        birthday.getText().toString());
+
+                                String uid = mAuth.getCurrentUser().getUid();
+                                database.getReference("Users").child(uid).setValue(user);
                                 Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
                                 startActivity(intent);
                             }
                             else {
                                 // If sign in fails, display a message to the user.
 
-                                Toast.makeText(SignUpActivity.this, "Authentication failed.",
-                                        Toast.LENGTH_SHORT).show();
+                                Toast.makeText(SignUpActivity.this, task.getException().getMessage(),
+                                        Toast.LENGTH_LONG).show();
                             }
-                        }
+n                        }
                     });
         }
         }
