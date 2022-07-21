@@ -7,12 +7,20 @@ public class User {
     private String name;
     private String email;
     private String password;
+    private String location;
+    private String idNum;
+    private String phoneNum;
+    private String birthday;
 
     // Constructor
-    public User(String name, String email, String password) {
+    public User(String name, String email, String password, String location, String idNum, String phoneNum, String birthday) {
         this.name = name;
         this.email = email;
         this.password = password;
+        this.location = location;
+        this.idNum = idNum;
+        this.phoneNum = phoneNum;
+        this.birthday = birthday;
     }
 
     public User() {

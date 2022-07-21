@@ -13,7 +13,7 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sign Up\n\n\n\n\n\n\n\n\n"
+        android:text="Sign Up\n\n"
         android:textSize="25sp"
         android:gravity="center"
         android:textColor="#520F33" />
@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         android:hint="Location"
         android:gravity="center"
-        android:inputType="textPassword" />
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/idNum"
@@ -56,7 +56,7 @@
         android:layout_height="wrap_content"
         android:hint="ID Number"
         android:gravity="center"
-        android:inputType="textPassword" />
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/PhoneNum"
@@ -64,7 +64,15 @@
         android:layout_height="wrap_content"
         android:hint="Phone Number"
         android:gravity="center"
-        android:inputType="textPassword" />
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/birthday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Birthday DD/MM//YY"
+        android:gravity="center"
+        android:inputType="textPersonName" />
 
 
     <!--

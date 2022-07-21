@@ -34,7 +34,7 @@ public class ContentActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance("https://meetdevworkshop-82ffa-default-rtdb.europe-west1.firebasedatabase.app/");
         users = new ArrayList<User>();
-        User Yanai = new User("Yanai", "yanai0165@gmail.com", "12345678");
+        User Yanai = new User("Yanai", "yanai0165@gmail.com", "12345678", "Ramla", "327521753", "0534323214", "17/01/05");
         String uid = mAuth.getCurrentUser().getUid();
         database.getReference("Users").child(uid).setValue(Yanai);
 

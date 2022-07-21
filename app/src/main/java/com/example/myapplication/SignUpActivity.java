@@ -14,11 +14,14 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
-    EditText username, password, email, location, idNum, phoneNum;
+    EditText username, password, email, location, idNum, phoneNum, birthday;
     View signup;
     FirebaseAuth mAuth;
+    FirebaseDatabase database;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,8 +32,15 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         location = findViewById(R.id.location);
         idNum = findViewById(R.id.idNum);
         phoneNum = findViewById(R.id.PhoneNum);
+        birthday = findViewById(R.id.birthday);
         signup = findViewById(R.id.signup);
         mAuth = FirebaseAuth.getInstance();
+        database = FirebaseDatabase.getInstance("https://together-63e15-default-rtdb.europe-west1.firebasedatabase.app/");
+
+        User user = new User(username.getText().toString(), email.getText().toString(), password.getText().toString(), location.getText().toString(), idNum.getText().toString(), phoneNum.getText().toString(), birthday.getText().toString());
+        String uid = mAuth.getCurrentUser().getUid();
+        database.getReference("Users").child(uid).setValue(user);
+
         signup.setOnClickListener(this);
     }
 
