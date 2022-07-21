@@ -8,6 +8,7 @@ public class Event {
     private String date;
     private String location;
     private String time;
+    private String description;
 
     public String getName() {
         return name;
@@ -41,11 +42,20 @@ public class Event {
         this.time = time;
     }
 
-    public Event(String name, String date, String location, String time) {
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Event(String name, String date, String location, String time, String description) {
         this.name = name;
         this.date = date;
         this.location = location;
         this.time = time;
+        this.description = description;
     }
 
     public Event() {

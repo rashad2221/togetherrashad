@@ -23,29 +23,37 @@ import java.util.ArrayList;
 
 public class ContentActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
-    ListView usersListView;
-    ArrayList<User> users;
-    ArrayAdapter<User> arrayAdapter;
+    ListView eventsListView;
+    ArrayList<Event> events;
+    ArrayAdapter<Event> arrayAdapter;
     FirebaseDatabase database;
+    Day day;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_content);
         mAuth = FirebaseAuth.getInstance();
-        database = FirebaseDatabase.getInstance("https://meetdevworkshop-82ffa-default-rtdb.europe-west1.firebasedatabase.app/");
-        users = new ArrayList<User>();
-        User Yanai = new User("Yanai", "yanai0165@gmail.com", "12345678", "Ramla", "327521753", "0534323214", "17/01/05");
-        String uid = mAuth.getCurrentUser().getUid();
-        database.getReference("Users").child(uid).setValue(Yanai);
+        eventsListView = findViewById(R.id.eventsListView);
+        events = new ArrayList<Event>();
 
+        Event bingo = new Event("Bingo Night", "18/01/22", "Tel Aviv Retirement Home", "16:00", "Support thr retirement home in the event");
+        events.add(bingo);
+        arrayAdapter = new EventArrayAdapter(ContentActivity.this, R.layout.custom_row, events);
+        eventsListView.setAdapter(arrayAdapter);
+
+
+        // database = FirebaseDatabase.getInstance("https://meetdevworkshop-82ffa-default-rtdb.europe-west1.firebasedatabase.app/");
         // database.getReference("Users").child("2").setValue(user);
+
+        /*
         DatabaseReference users_data = database.getReference();
         users_data.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot data: snapshot.getChildren()) {
-                    User user = data.getValue(User.class);
-                    users.add(user);
+                    Event event = data.getValue(Event.class);
+                    events.add(event);
                 }
                 // usersListView = findViewById(R.id.startupslistview);
                 // arrayAdapter = new UserArrayAdapter(ContentActivity.this, R.layout.custom_row, users);
@@ -57,7 +65,9 @@ public class ContentActivity extends AppCompatActivity {
 
             }
         });
-        // users.add(Yanai);
+
+         */
+
     }
 
     @Override
