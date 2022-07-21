@@ -28,8 +28,8 @@ public class Calendar extends AppCompatActivity {
                 String date = (i1 + 1)+ "/" + i2 +"/" + i;
                 myDate.setText(date);
                 Log.d("test", date);
-                Intent intent = new Intent(Calendar.this, DayPlans.class);
-                intent.putExtra("date", "Date:" + date);
+                Intent intent = new Intent(Calendar.this, ContentActivity.class);
+                //intent.putExtra("date", "Date:" + date);
 
                 startActivity(intent);
             }
