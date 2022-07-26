@@ -25,7 +25,7 @@ public class ElderySignUp extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_up);
+        setContentView(R.layout.activity_eldery_sign_up);
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
         email = findViewById(R.id.email);
@@ -33,7 +33,7 @@ public class ElderySignUp extends AppCompatActivity implements View.OnClickListe
         phoneNum = findViewById(R.id.PhoneNum);
         signup = findViewById(R.id.signup);
         mAuth = FirebaseAuth.getInstance();
-        database = FirebaseDatabase.getInstance("https://together-63e15-default-rtdb.europe-west1.firebasedatabase.app/");
+        database = FirebaseDatabase.getInstance("https://togethermvp-57663-default-rtdb.firebaseio.com/");
 
 
         signup.setOnClickListener(this);
@@ -56,14 +56,17 @@ public class ElderySignUp extends AppCompatActivity implements View.OnClickListe
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
                                 // Sign in success, update UI with the signed-in user's information
-                                House house = new House(username.getText().toString(),
+                                User user = new User(username.getText().toString(),
                                         email,
                                         password,
                                         location.getText().toString(),
-                                        phoneNum.getText().toString());
+                                        "1",
+                                        phoneNum.getText().toString(),
+                                        "1/1/1999",
+                                        false);
 
                                 String uid = mAuth.getCurrentUser().getUid();
-                                database.getReference("Houses").child(uid).setValue(house);
+                                database.getReference("Users2").child(uid).setValue(user);
                                 Intent intent = new Intent(ElderySignUp.this, MainActivity.class);
                                 startActivity(intent);
                             }

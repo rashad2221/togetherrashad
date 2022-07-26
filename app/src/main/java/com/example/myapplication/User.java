@@ -11,6 +11,7 @@ public class User {
     private String idNum;
     private String phoneNum;
     private String birthday;
+    private boolean isTeenager;
 
     // Constructor
     public User(String name, String email, String password, String location, String idNum, String phoneNum, String birthday) {
@@ -21,6 +22,18 @@ public class User {
         this.idNum = idNum;
         this.phoneNum = phoneNum;
         this.birthday = birthday;
+        this.isTeenager = true;
+    }
+
+    public User(String name, String email, String password, String location, String idNum, String phoneNum, String birthday, boolean isTeenager) {
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.location = location;
+        this.idNum = idNum;
+        this.phoneNum = phoneNum;
+        this.birthday = birthday;
+        this.isTeenager = isTeenager;
     }
 
     public User() {
@@ -79,10 +92,13 @@ public class User {
         return this.password;
     }
 
-
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public boolean getIsTeenager() {return this.isTeenager;}
+
+    public void setIsTeenager(boolean isTeenager) {this.isTeenager = isTeenager;}
 
     @Override
     public String toString() {
