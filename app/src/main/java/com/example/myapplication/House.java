@@ -9,6 +9,7 @@ public class House {
     private String password;
     private String location;
     private String phoneNum;
+    private boolean isTeenager;
 
     // Constructor
     public House(String name, String email, String password, String location, String phoneNum) {
@@ -17,6 +18,7 @@ public class House {
         this.password = password;
         this.location = location;
         this.phoneNum = phoneNum;
+        this.isTeenager = false;
     }
 
     public House() {
@@ -62,6 +64,10 @@ public class House {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public boolean getIsTeenager() {
+        return this.isTeenager;
     }
 
     @Override

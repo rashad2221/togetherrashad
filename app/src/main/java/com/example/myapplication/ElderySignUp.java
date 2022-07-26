@@ -27,14 +27,14 @@ public class ElderySignUp extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eldery_sign_up);
-        username = findViewById(R.id.username);
+        username = findViewById(R.id.name);
         password = findViewById(R.id.password);
         email = findViewById(R.id.email);
         location = findViewById(R.id.location);
         phoneNum = findViewById(R.id.PhoneNum);
         signup = findViewById(R.id.signup);
         mAuth = FirebaseAuth.getInstance();
-        database = FirebaseDatabase.getInstance("https://together-63e15-default-rtdb.europe-west1.firebasedatabase.app/");
+        database = FirebaseDatabase.getInstance("https://togethermvp-57663-default-rtdb.firebaseio.com/");
         signup.setOnClickListener(this);
     }
 
@@ -47,26 +47,16 @@ public class ElderySignUp extends AppCompatActivity implements View.OnClickListe
 
     public void createAccount(String email, String password) {
         if(email != null && password != null) {
-            Toast.makeText(this, "works", Toast.LENGTH_LONG).show();
-
             mAuth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
                                 // Sign in success, update UI with the signed-in user's information
-                                User user = new User(username.getText().toString(),
-                                        email,
-                                        password,
-                                        location.getText().toString(),
-                                        "1",
-                                        phoneNum.getText().toString(),
-                                        "1/1/1999",
-                                        false);
-
+                                User user = new User(username.getText().toString(), email, password, location.getText().toString(), "0", phoneNum.getText().toString(),"1/1/1999", false);
                                 String uid = mAuth.getCurrentUser().getUid();
-                                database.getReference("Users2").child(uid).setValue(user);
-                                Intent intent = new Intent(ElderySignUp.this, MainActivity.class);
+                                database.getReference("Users").child(uid).setValue(user);
+                                Intent intent = new Intent(ElderySignUp.this, SignInActivity.class);
                                 startActivity(intent);
                             }
                             else {

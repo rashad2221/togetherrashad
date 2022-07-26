@@ -14,7 +14,10 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class SignInActivity extends AppCompatActivity implements View.OnClickListener {
     EditText email, password;
@@ -49,9 +52,26 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             String uid = mAuth.getCurrentUser().getUid();
-                            System.out.println(database.getReference("House").child(uid) == null);
-                            Intent intent = new Intent(SignInActivity.this, ContentActivity.class);
-                            startActivity(intent);
+                            database.getReference("Users").child(uid).addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                User currentUser= snapshot.getValue(User.class);
+                                if (currentUser.getIsTeenager()){
+                                    Intent intent = new Intent(SignInActivity.this, ContentActivity.class);
+                                    startActivity(intent);
+                                } else {
+                                    Intent intent = new Intent(SignInActivity.this, MainActivity.class);
+                                    startActivity(intent);
+
+
+                                }
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {
+
+                            }
+                            });
                         } else {
                             // If sign in fails, display a message to the user.
                             Toast.makeText(SignInActivity.this, task.getException().getMessage(),
