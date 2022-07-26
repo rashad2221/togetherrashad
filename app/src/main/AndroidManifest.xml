@@ -13,7 +13,8 @@
             android:name=".ElderySignUp"
             android:exported="false" />
         <activity
-            android:name=".retiermentLogin"
+
+            android:name=".DayEvents"
             android:exported="false" />
         <activity
             android:name=".DayPlans"
