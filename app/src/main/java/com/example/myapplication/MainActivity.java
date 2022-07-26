@@ -34,15 +34,22 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
     @Override
     public void onClick(View view) {
-        if(view == signup) {
+        if (view == signup) {
             Intent intent = new Intent(this, SignUpActivity.class);
             startActivity(intent);
-        }
-        else if(view == sign_in) {
+        } else if (view == sign_in) {
             Intent intent = new Intent(this, SignInActivity.class);
+            startActivity(intent);
+        } else if (view == about_us) {
+            Intent intent = new Intent(this, AboutUsActivity.class);
+            startActivity(intent);
+        }
+        else if( view == donate){
+            Intent intent = new Intent(this, DonationActivity.class);
             startActivity(intent);
         }
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
