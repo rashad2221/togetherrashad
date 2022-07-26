@@ -14,11 +14,14 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class SignInActivity extends AppCompatActivity implements View.OnClickListener {
     EditText email, password;
     View sign_in;
     FirebaseAuth mAuth;
+    FirebaseDatabase database;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +31,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
         sign_in = findViewById(R.id.sign_in);
         mAuth = FirebaseAuth.getInstance();
         sign_in.setOnClickListener(this);
+        database = FirebaseDatabase.getInstance("https://together-63e15-default-rtdb.europe-west1.firebasedatabase.app/");
     }
 
     @Override
@@ -44,7 +48,8 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
-                            
+                            String uid = mAuth.getCurrentUser().getUid();
+                            System.out.println(database.getReference("House").child(uid) == null);
                             Intent intent = new Intent(SignInActivity.this, ContentActivity.class);
                             startActivity(intent);
                         } else {
