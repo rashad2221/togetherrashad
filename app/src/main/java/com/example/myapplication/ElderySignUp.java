@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -34,8 +35,6 @@ public class ElderySignUp extends AppCompatActivity implements View.OnClickListe
         signup = findViewById(R.id.signup);
         mAuth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance("https://together-63e15-default-rtdb.europe-west1.firebasedatabase.app/");
-
-
         signup.setOnClickListener(this);
     }
 
