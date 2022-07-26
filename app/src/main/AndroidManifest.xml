@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".DayEvents"
+            android:exported="false" />
+        <activity
             android:name=".DayPlans"
             android:exported="false" />
         <activity
