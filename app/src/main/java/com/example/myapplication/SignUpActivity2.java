@@ -44,21 +44,26 @@ public class SignUpActivity2 extends AppCompatActivity  {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                CreateAccount(UserEmail, UserPassword);
+                CreateAccount(UserEmail, UserPassword, UserName, UserPhone,
+                        location.getText().toString(),
+                        idNum.getText().toString(),
+                        birthday.getText().toString());
                 Intent intent = new Intent(SignUpActivity2.this, SignInActivity.class);
                 startActivity(intent);
             }
         });
     }
 
-    public void CreateAccount(String email, String password){
+    public void CreateAccount(String email, String password, String name, String phone, String location, String ID, String birthday){
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
-
+                                User user = new User(name, email, password, location, ID, phone, birthday);
+                                String uid = mAuth.getCurrentUser().getUid();
+                                database.getReference("Users").child(uid).setValue(user);
                         } else {
                             // If sign in fails, display a message to the user.
                             Toast.makeText(SignUpActivity2.this, task.getException().getMessage(),
