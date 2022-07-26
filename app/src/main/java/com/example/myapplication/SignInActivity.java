@@ -44,6 +44,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
+                            
                             Intent intent = new Intent(SignInActivity.this, ContentActivity.class);
                             startActivity(intent);
                         } else {
