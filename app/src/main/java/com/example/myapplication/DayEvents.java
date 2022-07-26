@@ -36,7 +36,7 @@ public class DayEvents extends AppCompatActivity {
                 }
 
                 //HashMap <Event, String> values = (HashMap<Event, String>) events;
-                new RecyclerView_config().setConfig(recyclerView, DayEvents.this, events, keys);
+                new RecyclerView_config().setConfig(recyclerView, DayEvents.this, filtered, keys);
             }
 
             @Override
