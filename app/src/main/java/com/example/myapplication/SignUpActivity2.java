@@ -16,13 +16,11 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class SignUpActivity2 extends AppCompatActivity implements View.OnClickListener {
+public class SignUpActivity2 extends AppCompatActivity  {
     EditText location, idNum, birthday;
     View signup;
     FirebaseAuth mAuth;
     FirebaseDatabase database;
-
-    String UserEmail, UserPassword, UserName, UserPhone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,20 +35,37 @@ public class SignUpActivity2 extends AppCompatActivity implements View.OnClickLi
         idNum = findViewById(R.id.idNum);
         birthday = findViewById(R.id.birthday);
 
-        if (this.getIntent().getStringExtra("email") != null
-                && this.getIntent().getStringExtra("username") != null
-                && this.getIntent().getStringExtra("password") != null
-                && this.getIntent().getStringExtra("phoneumber") != null) {
-            UserEmail = (this.getIntent().getStringExtra("email"));
-            UserName = (this.getIntent().getStringExtra("username"));
-            UserPassword = (this.getIntent().getStringExtra("password"));
-            UserPhone = (this.getIntent().getStringExtra("phonenumber"));
+        String UserEmail = this.getIntent().getStringExtra("email");
+        String UserName = this.getIntent().getStringExtra("username");
+        String UserPassword = this.getIntent().getStringExtra("password");
+        String UserPhone = this.getIntent().getStringExtra("phoneNum");
 
-        } else {
-            // mSystemView.setText("NO VALUE PASSED");
-        }
 
-        signup.setOnClickListener(this);
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CreateAccount(UserEmail, UserPassword);
+                Intent intent = new Intent(SignUpActivity2.this, SignInActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    public void CreateAccount(String email, String password){
+        mAuth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            // Sign in success, update UI with the signed-in user's information
+
+                        } else {
+                            // If sign in fails, display a message to the user.
+                            Toast.makeText(SignUpActivity2.this, task.getException().getMessage(),
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
     }
 
     public void createAccount(String email, String password,
@@ -65,8 +80,11 @@ public class SignUpActivity2 extends AppCompatActivity implements View.OnClickLi
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
+                                //    public User(String name, String email, String password, String location, String idNum, String phoneNum, String birthday)
                                 User user = new User (UserName, email,
                                         password,location, idNum,phoneNum,birthday );
+                                String uid = mAuth.getCurrentUser().getUid();
+                                database.getReference("Users").child(uid).setValue(user);
                                 // Sign in success, update UI with the signed-in user's information
 
                             } else {
@@ -79,15 +97,4 @@ public class SignUpActivity2 extends AppCompatActivity implements View.OnClickLi
 
         }
     }
-    public void onClick(View view) {
-        if(view == signup){
-            createAccount(UserEmail, UserPassword, UserPhone, location.getText().toString(), idNum.getText().toString(),UserName, birthday.getText().toString());
-            Intent intent = new Intent(SignUpActivity2.this, SignInActivity.class);
-            startActivity(intent);
-
-
-        }
-    }
-
-
 }
