@@ -50,21 +50,21 @@
         android:text="Password must be at least 6 characters\n"
         android:gravity="center" />
 
-    <EditText
+    <!--<EditText
         android:id="@+id/location"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Location"
         android:gravity="center"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName" />-->
 
-    <EditText
+    <!--<EditText
         android:id="@+id/idNum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="ID Number"
         android:gravity="center"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName" />-->
 
     <EditText
         android:id="@+id/PhoneNum"
@@ -74,7 +74,7 @@
         android:gravity="center"
         android:inputType="textPersonName" />
 
-    <EditText
+    <!--<EditText
         android:id="@+id/birthday"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -83,7 +83,7 @@
         android:inputType="textPersonName" />
 
 
-    <!--
+    <!
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -102,8 +102,8 @@
     </RadioGroup> -->
 
     <Button
-        android:id="@+id/signup"
+        android:id="@+id/next"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="signup" />
+        android:text="Next" />
 </LinearLayout>
