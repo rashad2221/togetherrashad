@@ -36,14 +36,30 @@
         android:id="@+id/sign_in"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="sign in"
-        android:background="#827BAE" />
+        android:text="Log In"
+        android:background="#827BAE"
+        android:layout_margin="10dp"/>
 
     <Button
         android:id="@+id/signup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="signup"
-        android:background="#827BAE" />
+        android:text="Let's Get Started"
+        android:background="#827BAE"
+        android:layout_margin="10dp"/>
+    <Button
+        android:id="@+id/about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About Us"
+        android:background="#827BAE"
+        android:layout_margin="10dp"/>
+    <Button
+        android:id="@+id/donate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Donate"
+        android:background="#827BAE"
+        android:layout_margin="10dp"/>
 
 </LinearLayout>

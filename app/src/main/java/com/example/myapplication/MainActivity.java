@@ -14,6 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity implements OnClickListener {
     View signup;
     View sign_in;
+    View about_us;
+    View donate;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +24,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         signup.setOnClickListener(this);
         sign_in = findViewById(R.id.sign_in);
         sign_in.setOnClickListener(this);
+        about_us = findViewById(R.id.about);
+        about_us.setOnClickListener(this);
+        donate = findViewById(R.id.donate);
+        donate.setOnClickListener(this);
 
         //change
     }

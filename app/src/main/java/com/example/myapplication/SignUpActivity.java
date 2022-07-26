@@ -17,7 +17,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
-    EditText username, password, email, location, idNum, phoneNum, birthday;
+    EditText username, password, email, phoneNum;
     View signup;
     FirebaseAuth mAuth;
     FirebaseDatabase database;
@@ -29,13 +29,10 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
         email = findViewById(R.id.email);
-        location = findViewById(R.id.location);
-        idNum = findViewById(R.id.idNum);
         phoneNum = findViewById(R.id.PhoneNum);
-        birthday = findViewById(R.id.birthday);
-        signup = findViewById(R.id.signup);
-        mAuth = FirebaseAuth.getInstance();
-        database = FirebaseDatabase.getInstance("https://together-63e15-default-rtdb.europe-west1.firebasedatabase.app/");
+        signup = findViewById(R.id.next);
+        //mAuth = FirebaseAuth.getInstance();
+        //database = FirebaseDatabase.getInstance("https://together-63e15-default-rtdb.europe-west1.firebasedatabase.app/");
 
 
         signup.setOnClickListener(this);
@@ -44,11 +41,18 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View view) {
         if(view == signup){
-            createAccount(email.getText().toString(), password.getText().toString() );
+            Intent i = new Intent(this, SignUpActivity2.class);
+            i.putExtra("username",username.getText().toString());
+            i.putExtra("password",password.getText().toString());
+            i.putExtra("email",email.getText().toString());
+            i.putExtra("phoneNum",phoneNum.getText().toString());
+            startActivity(i);
+            //createAccount(email.getText().toString(), password.getText().toString() );
         }
     }
 
-    public void createAccount(String email, String password) {
+    /*
+    public void SendInfo(String email, String password) {
         if(email != null && password != null) {
             Toast.makeText(this, "works h", Toast.LENGTH_LONG).show();
 
@@ -61,14 +65,11 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                                 User user = new User(username.getText().toString(),
                                         email,
                                         password,
-                                        location.getText().toString(),
-                                        idNum.getText().toString(),
-                                        phoneNum.getText().toString(),
-                                        birthday.getText().toString());
+                                        phoneNum.getText().toString());
 
                                 String uid = mAuth.getCurrentUser().getUid();
                                 database.getReference("Users").child(uid).setValue(user);
-                                Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
+                                Intent intent = new Intent(SignUpActivity.this, SignUpActivity2.class);
                                 startActivity(intent);
                             }
                             else {
@@ -81,5 +82,5 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                     });
         }
         }
-
+*/
 }
