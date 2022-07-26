@@ -34,7 +34,7 @@ public class retiermentLogin extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick(View view){
-        
+
     }
 
 
