@@ -22,6 +22,16 @@
             android:name=".SignUpActivity2"
             android:exported="false" />
         <activity
+            android:name=".ElderySignUp"
+            android:exported="false" />
+        <activity
+            android:name=".retiermentLogin"
+            android:exported="false" />
+        <activity
+
+            android:name=".DayEvents"
+            android:exported="false" />
+        <activity
             android:name=".DayPlans"
             android:exported="false" />
         <activity
