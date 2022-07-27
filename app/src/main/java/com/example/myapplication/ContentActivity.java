@@ -37,12 +37,7 @@ public class ContentActivity extends AppCompatActivity {
         eventsListView = findViewById(R.id.eventsListView);
         events = new ArrayList<Event>();
 
-        Event bingo = new Event("House 1","Bingo Night", "18/01/22", "Tel Aviv Retirement Home", "16:00", "Support the retirement home in the event", "10");
-        Event chess = new Event("House 2","Chess Tournament", "18/01/22", "Jerusalem Retirement Home", "12:00", "Play with the elders and run the tournament", "10");
-        Event dancing = new Event("House 3", "Dancing Night", "18/01/22", "Ramat Ran Retirement Home", "20:00", "Dance with the elders and run the event", "10");
-        events.add(chess);
-        events.add(bingo);
-        events.add(dancing);
+
         arrayAdapter = new EventArrayAdapter(ContentActivity.this, R.layout.custom_row, events);
         eventsListView.setAdapter(arrayAdapter);
 

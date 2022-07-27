@@ -46,7 +46,7 @@ public class RecyclerView_config {
             title.setText(event.getName());
             date.setText(event.getDate());
             time.setText(event.getTime());
-            location.setText(event.getLocation());
+            location.setText("Address: "+event.getLocation());
             description.setText(event.getDescription());
             this.key = key;
         }

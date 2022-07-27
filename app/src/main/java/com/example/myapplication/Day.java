@@ -28,7 +28,7 @@ public class Day {
 
     public Day() {
         database = FirebaseDatabase.getInstance();
-        mReferenceDays = database.getReference("Events");
+        mReferenceDays = database.getReference("Events"); // add location
     }
 
     public void readEvents(final DataStatus dataStatus) {

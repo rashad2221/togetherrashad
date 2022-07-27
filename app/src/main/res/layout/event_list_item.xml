@@ -4,10 +4,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    android:layout_height="wrap_content"
+    android:gravity="center"
     android:orientation="vertical"
-    android:gravity="center">
+    android:visibility="visible"
+    tools:context=".MainActivity"
+    tools:visibility="visible"
+    android:background="@drawable/back">
+
 
     <TextView
         android:id="@+id/title_text_view"
@@ -21,24 +25,25 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/location"
+        android:id="@+id/description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Location"
         android:layout_marginStart="4dp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="8dp"
+        android:text="Description"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="39dp" />
+
 
     <TextView
         android:id="@+id/date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Date"
         android:layout_marginStart="4dp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="8dp"
+        android:text="Date"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="39dp" />
 
@@ -46,23 +51,23 @@
         android:id="@+id/time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Time"
         android:layout_marginStart="4dp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="8dp"
+        android:text="Time"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="39dp" />
-
 
     <TextView
-        android:id="@+id/description"
+        android:id="@+id/location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Description"
         android:layout_marginStart="4dp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="8dp"
+        android:text="Address"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="39dp" />
+
 
 </LinearLayout>

@@ -83,7 +83,7 @@ public class AddingEvents extends AppCompatActivity implements View.OnClickListe
                 Event event = new Event(currentUser.getName(), name.getText().toString(), date.getText().toString(), currentUser.getLocation(), time.getText().toString(), description.getText().toString(), neededNum.getText().toString());
                 String[] words = date.getText().toString().split("/");
                 String word = String.join(":", words);
-                database.getReference("Events").child(word).setValue(event);
+                database.getReference("Events").child(name.getText().toString()).setValue(event);
             }
 
             @Override
@@ -102,7 +102,7 @@ public class AddingEvents extends AppCompatActivity implements View.OnClickListe
                 calendar.set(java.util.Calendar.YEAR,year);
                 calendar.set(java.util.Calendar.MONTH,month);
                 calendar.set(java.util.Calendar.DAY_OF_MONTH,dayOfMonth);
-                SimpleDateFormat simpleDateFormat=new SimpleDateFormat("dd/M/yyyy");
+                SimpleDateFormat simpleDateFormat=new SimpleDateFormat("d/M/yyyy");
                 date_in.setText(simpleDateFormat.format(calendar.getTime()));
 
             }
