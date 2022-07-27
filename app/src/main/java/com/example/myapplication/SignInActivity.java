@@ -34,7 +34,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
         sign_in = findViewById(R.id.sign_in);
         mAuth = FirebaseAuth.getInstance();
         sign_in.setOnClickListener(this);
-        database = FirebaseDatabase.getInstance("https://together-63e15-default-rtdb.europe-west1.firebasedatabase.app/");
+        database = FirebaseDatabase.getInstance("https://togethermvp-57663-default-rtdb.firebaseio.com/");
     }
 
     @Override
@@ -56,6 +56,8 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
                             @Override
                             public void onDataChange(@NonNull DataSnapshot snapshot) {
                                 User currentUser= snapshot.getValue(User.class);
+                                System.out.println(currentUser);
+                                System.out.println(currentUser.getIsTeenager());
                                 if (currentUser.getIsTeenager()){
                                     Intent intent = new Intent(SignInActivity.this, ContentActivity.class);
                                     startActivity(intent);
