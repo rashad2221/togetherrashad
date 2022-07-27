@@ -56,13 +56,11 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
                             @Override
                             public void onDataChange(@NonNull DataSnapshot snapshot) {
                                 User currentUser= snapshot.getValue(User.class);
-                                System.out.println(currentUser);
-                                System.out.println(currentUser.getIsTeenager());
                                 if (currentUser.getIsTeenager()){
-                                    Intent intent = new Intent(SignInActivity.this, ContentActivity.class);
+                                    Intent intent = new Intent(SignInActivity.this, Calendar.class);
                                     startActivity(intent);
                                 } else {
-                                    Intent intent = new Intent(SignInActivity.this, MainActivity.class);
+                                    Intent intent = new Intent(SignInActivity.this, AddingEvents.class);
                                     startActivity(intent);
 
 
