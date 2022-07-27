@@ -80,10 +80,12 @@ public class AddingEvents extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 User currentUser= snapshot.getValue(User.class);
-                Event event = new Event(currentUser.getName(), name.getText().toString(), date.getText().toString(), currentUser.getLocation(), time.getText().toString(), description.getText().toString(), neededNum.getText().toString());
+                Event event = new Event(currentUser.getName(), name.getText().toString(), date.getText().toString(), currentUser.getLocation(), currentUser.getAddress(), time.getText().toString(), description.getText().toString(), neededNum.getText().toString());
                 String[] words = date.getText().toString().split("/");
                 String word = String.join(":", words);
                 database.getReference("Events").child(name.getText().toString()).setValue(event);
+                Intent intent = new Intent(AddingEvents.this, AddingEvents.class);
+                startActivity(intent);
             }
 
             @Override

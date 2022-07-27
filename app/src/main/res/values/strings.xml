@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Together</string>
+
+    <string-array name="locations">
+        <item>Jerusalem</item>
+        <item>Center (Tel Aviv)</item>
+        <item>North</item>
+    </string-array>
 </resources>

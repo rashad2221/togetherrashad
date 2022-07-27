@@ -11,6 +11,7 @@ public class Event {
     private String time;
     private String description;
     private String neededNum;
+    private String address;
 
     public String getName() {
         return name;
@@ -56,11 +57,16 @@ public class Event {
 
     public String getNeededNum(){return this.neededNum;}
 
-    public Event(String houseName, String name, String date, String location, String time, String description, String num) {
+    public String getAddress(){return this.address;}
+
+    public void setAddress(String address){this.address = address;}
+
+    public Event(String houseName, String name, String date, String location, String address, String time, String description, String num) {
         this.houseName = houseName;
         this.name = name;
         this.date = date;
         this.location = location;
+        this.address = address;
         this.time = time;
         this.description = description;
         this.neededNum = num;

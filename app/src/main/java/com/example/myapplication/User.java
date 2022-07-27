@@ -8,6 +8,7 @@ public class User {
     private String email;
     private String password;
     private String location;
+    private String address;
     private String idNum;
     private String phoneNum;
     private String birthday;
@@ -22,10 +23,11 @@ public class User {
         this.idNum = idNum;
         this.phoneNum = phoneNum;
         this.birthday = birthday;
+        this.address = "";
         this.isTeenager = true;
     }
 
-    public User(String name, String email, String password, String location, String idNum, String phoneNum, String birthday, boolean isTeenager) {
+    public User(String name, String email, String password, String location, String idNum, String phoneNum, String birthday, boolean isTeenager, String address) {
         this.name = name;
         this.email = email;
         this.password = password;
@@ -34,6 +36,7 @@ public class User {
         this.phoneNum = phoneNum;
         this.birthday = birthday;
         this.isTeenager = isTeenager;
+        this.address = address;
     }
 
     public User() {
@@ -99,6 +102,10 @@ public class User {
     public boolean getIsTeenager() {return this.isTeenager;}
 
     public void setIsTeenager(boolean isTeenager) {this.isTeenager = isTeenager;}
+
+    public String getAddress() {return  this.address;}
+
+    public void setAddress(String address) {this.address = address;}
 
     @Override
     public String toString() {

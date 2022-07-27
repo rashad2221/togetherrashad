@@ -12,7 +12,7 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Today's Activities \n"
+        android:text="This Day's Activities \n"
         android:textSize="35sp"
         android:gravity="center"
         android:textColor="#520F33" />
