@@ -75,7 +75,7 @@ public class AddingEvents extends AppCompatActivity implements View.OnClickListe
             addEvent();
         }
         else if (view == add_elder) {
-            Intent i = new Intent(this, AddingEvents.class);
+            Intent i = new Intent(this, AddElder.class);
             startActivity(i);
         }
     }

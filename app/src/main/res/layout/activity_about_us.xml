@@ -8,6 +8,23 @@
     android:orientation="vertical"
     >
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About Us\n\n"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:textColor="#520F33" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Together is an app designed to positively impact the mental health of the elderly. We help teenagers connect with a retirement home and engage in meaningful activities with the elderly. \n\n\nOur team consists of Palestinian and Israeli young adults who work towards witnessing a prosperous future for the elderly and the growth of the youth. As product managers, developers, designers, Uxers, and marketers, we work collectively to make Together as easy, accessible, and effective as possible."
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textColor="@color/black" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="150dp"

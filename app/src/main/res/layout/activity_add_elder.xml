@@ -35,6 +35,15 @@ android:gravity="center">
     android:gravity="center"
     android:inputType="textPassword" />
 
+<TextView
+    android:id="@+id/textView2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Choose your hobby:\n\n"
+    android:textSize="20sp"
+    android:gravity="center"
+    android:textColor="@color/black" />
+
 <Button
 android:id="@+id/homework"
 android:layout_width="wrap_content"
