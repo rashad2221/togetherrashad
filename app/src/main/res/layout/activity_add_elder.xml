@@ -1,9 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".AddElder">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".MainActivity"
+android:orientation="vertical"
+android:gravity="center">
+
+
+<TextView
+    android:id="@+id/textView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Sign up an Elder\n\n"
+    android:textSize="25sp"
+    android:gravity="center"
+    android:textColor="#520F33" />
+
+<EditText
+    android:id="@+id/name"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Name"
+    android:gravity="center"
+    android:inputType="textPersonName" />
+
+<EditText
+    android:id="@+id/gender"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Password"
+    android:gravity="center"
+    android:inputType="textPassword" />
+
+<Button
+android:id="@+id/homework"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Homework" />
+
+<Button
+    android:id="@+id/chess"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Chess" />
+
+<Button
+    android:id="@+id/play_guitar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Play Guitar" />
+
+<Button
+    android:id="@+id/cooking"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Sign in" />
+
+<Button
+    android:id="@+id/art"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Art" />
+
+<Button
+    android:id="@+id/theater"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Sign in" />
+
+<Button
+    android:id="@+id/writing"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Sign in" />
+
+<Button
+    android:id="@+id/singing"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Sign in" />
+
+
+<Button
+    android:id="@+id/sign_up"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Sign up" />
+</LinearLayout>
