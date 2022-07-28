@@ -6,11 +6,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.CalendarView;
 import android.widget.TextView;
 
-public class Calendar extends AppCompatActivity {
+import com.google.firebase.auth.FirebaseAuth;
 
+public class Calendar extends AppCompatActivity {
+    FirebaseAuth mAuth;
     CalendarView calendarView;
     TextView myDate;
 
@@ -18,7 +23,7 @@ public class Calendar extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar);
-
+        mAuth = FirebaseAuth.getInstance();
         calendarView = (CalendarView) findViewById(R.id.calendarView);
         myDate = findViewById(R.id.DateText);
 
@@ -33,5 +38,33 @@ public class Calendar extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.example_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        Intent intent;
+        switch (item.getItemId()) {
+            case R.id.sign_out:
+                mAuth.signOut();
+                // Toast.makeText(this, "sign out", Toast.LENGTH_SHORT);
+                intent = new Intent(this, SignInActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.calendar:
+                intent = new Intent(this, Calendar.class);
+                startActivity(intent);
+                // default:
+                // return super.onOptionsItemSelected(item);
+        }
+        return true;
     }
 }
