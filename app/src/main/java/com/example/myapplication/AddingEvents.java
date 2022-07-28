@@ -30,7 +30,7 @@ import java.util.Calendar;
 
 public class AddingEvents extends AppCompatActivity implements View.OnClickListener{
     EditText name, date, time, neededNum, description;
-    View signup;
+    View signup, add_elder;
     FirebaseAuth mAuth;
     FirebaseDatabase database;
 
@@ -46,9 +46,11 @@ public class AddingEvents extends AppCompatActivity implements View.OnClickListe
         neededNum = findViewById(R.id.needed);
         description = findViewById(R.id.description);
         signup = findViewById(R.id.signup);
+        add_elder = findViewById(R.id.add_elder);
         mAuth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance("https://togethermvp-57663-default-rtdb.firebaseio.com/");
         signup.setOnClickListener(this);
+        add_elder.setOnClickListener(this);
 
         date.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,6 +73,10 @@ public class AddingEvents extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         if (view == signup){
             addEvent();
+        }
+        else if (view == add_elder) {
+            Intent i = new Intent(this, AddingEvents.class);
+            startActivity(i);
         }
     }
 
