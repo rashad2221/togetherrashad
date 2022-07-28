@@ -6,6 +6,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -83,5 +86,31 @@ public class DayEvents extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.example_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        Intent intent;
+        switch (item.getItemId()) {
+            case R.id.sign_out:
+                mAuth.signOut();
+                // Toast.makeText(this, "sign out", Toast.LENGTH_SHORT);
+                intent = new Intent(this, SignInActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.calendar:
+                intent = new Intent(this, Calendar.class);
+                startActivity(intent);
+                // default:
+                // return super.onOptionsItemSelected(item);
+        }
+        return true;
     }
 }
