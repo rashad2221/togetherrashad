@@ -24,6 +24,7 @@ public class DayEvents extends AppCompatActivity {
     private RecyclerView recyclerView;
     FirebaseAuth mAuth;
     FirebaseDatabase database;
+    User currentUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +36,22 @@ public class DayEvents extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance("https://togethermvp-57663-default-rtdb.firebaseio.com/");
 
+        String uid = mAuth.getCurrentUser().getUid();
+        database.getReference("Users").child(uid).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                currentUser = snapshot.getValue(User.class);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview_events);
+
+
         new Day().readEvents(new Day.DataStatus() {
             ArrayList filtered = new ArrayList();
 
@@ -43,30 +59,15 @@ public class DayEvents extends AppCompatActivity {
             public void DataIsLoaded(List<Event> events, List<String> keys) {
 
                 for (Event date : events) {
-                    String uid = mAuth.getCurrentUser().getUid();
-                    database.getReference("Users").child(uid).addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            User currentUser= snapshot.getValue(User.class);
-                            if(date.getLocation().equals(currentUser.getLocation())) {
-                                if (date.getDate().equals(dateString)) {
-                                    filtered.add(date);
-                                    String beep = "bee";
-                                }
-                            }
+                    if(date.getLocation().equals(currentUser.getLocation())) {
+                        if (date.getDate().equals(dateString)) {
+                            filtered.add(date);
+                            String beep = "bee";
                         }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {
-
-                        }
-                    });
-
-
+                    }
 
                 }
-                finish();
-                startActivity(getIntent());
+
                 //HashMap <Event, String> values = (HashMap<Event, String>) events;
                 new RecyclerView_config().setConfig(recyclerView, DayEvents.this, filtered, keys);
             }
