@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
@@ -21,9 +22,10 @@ import com.google.firebase.database.ValueEventListener;
 
 public class AddElder extends AppCompatActivity implements View.OnClickListener {
     EditText name, gender;
-    View sign_up, homework, chess, play_guitar, cooking, art, theater, writing, singing;
     DatabaseReference mDatabase;
     FirebaseDatabase database;
+    String hobby;
+    Button sign_up;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,58 +33,16 @@ public class AddElder extends AppCompatActivity implements View.OnClickListener 
         setContentView(R.layout.activity_add_elder);
         database = FirebaseDatabase.getInstance("https://togethermvp-57663-default-rtdb.firebaseio.com/");
         mDatabase = database.getReference("Elders");
-
         name = findViewById(R.id.name);
         gender = findViewById(R.id.gender);
-        homework = findViewById(R.id.homework);
-        chess = findViewById(R.id.chess);
-        play_guitar = findViewById(R.id.play_guitar);
-        cooking = findViewById(R.id.cooking);
-        art = findViewById(R.id.art);
-        theater = findViewById(R.id.theater);
-        writing = findViewById(R.id.writing);
-        singing = findViewById(R.id.singing);
         sign_up = findViewById(R.id.sign_up);
-
-        homework.setOnClickListener(this);
-        chess.setOnClickListener(this);
-        play_guitar.setOnClickListener(this);
-        cooking.setOnClickListener(this);
-        art.setOnClickListener(this);
-        theater.setOnClickListener(this);
-        writing.setOnClickListener(this);
-        singing.setOnClickListener(this);
         sign_up.setOnClickListener(this);
+
     }
 
     @Override
     public void onClick(View view) {
-        String hobby = "";
-        if(view == homework) {
-            hobby = "homework";
-        }
-        else if(view == chess) {
-            hobby = "chess";
-        }
-        else if(view == play_guitar) {
-            hobby = "play guitar";
-        }
-        else if(view == cooking) {
-            hobby = "cooking";
-        }
-        else if(view == art) {
-            hobby = "art";
-        }
-        else if(view == theater) {
-            hobby = "theater";
-        }
-        else if(view == writing) {
-            hobby = "writing";
-        }
-        else if(view == singing) {
-            hobby = "singing";
-        }
-        else if(view == sign_up) {
+        if(view == sign_up) {
             Elder elder;
             elder = new Elder(name.getText().toString(),
                     gender.getText().toString(),
@@ -93,20 +53,43 @@ public class AddElder extends AppCompatActivity implements View.OnClickListener 
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
-
         // Check which radio button was clicked
         switch(view.getId()) {
-            case R.id.radio_pirates:
-                if (checked)
-                    // Pirates are the best
-                    break;
-            case R.id.radio_ninjas:
-                if (checked)
-                    // Ninjas rule
-                    break;
+            case R.id.homework:
+                if (checked) {
+                    hobby = "homework";
+                }
+                break;
+            case R.id.chess:
+                if (checked) {
+                    hobby = "chess";
+                }
+                break;
+            case R.id.play_guitar:
+                if(checked) {
+                    hobby = "play guitar";
+                }
+                break;
+            case R.id.cooking:
+                if(checked)
+                    hobby = "cooking";
+                break;
+            case R.id.art:
+                if(checked)
+                    hobby = "art";
+                break;
+            case R.id.theater:
+                if(checked)
+                    hobby = "theater";
+                break;
+            case R.id.singing:
+                if(checked)
+                    hobby = "singing";
+                break;
+            case R.id.reading:
+                if(checked)
+                    hobby = "reading";
+                break;
         }
     }
-
-
-
 }

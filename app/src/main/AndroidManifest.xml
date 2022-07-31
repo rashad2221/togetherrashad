@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".ElderMenu"
+            android:exported="false" />
+        <activity
             android:name=".NavigationBar"
             android:exported="false" />
         <activity
