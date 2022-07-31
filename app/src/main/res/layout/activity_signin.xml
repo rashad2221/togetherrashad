@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -40,4 +40,195 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Sign in" />
-</LinearLayout>
+</LinearLayout>-->
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="wrap_content" >
+    <!--
+    /*
+     *	This content is generated from the API File Info.
+     *	(Alt+Shift+Ctrl+I).
+     *
+     *	@desc
+     *	@file 		travel_5
+     *	@date 		Thursday 28th of July 2022 12:36:18 PM
+     *	@title 		Page 1
+     *	@author
+     *	@keywords
+     *	@generator 	Export Kit v1.3.figma
+     *
+     */
+    -->
+    <ScrollView android:id="@+id/travel_5"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout android:id="@+id/content_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+
+
+            <RelativeLayout android:id="@+id/page_travel_5_ek1"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <View
+                    android:id="@+id/_bg__travel_5_ek2"
+                    android:layout_width="414dp"
+                    android:layout_height="896dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/_bg__travel_5_ek2_shape" />
+
+
+                <View
+                    android:id="@+id/rectangle_1434"
+                    android:layout_width="419dp"
+                    android:layout_height="83dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="-7dp"
+                    android:background="@drawable/rectangle_1434_shape" />
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="120dp"
+                    android:layout_height="49dp"
+                    android:layout_alignBottom="@+id/textView14"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="299dp"
+                    android:layout_marginBottom="625dp"
+                    android:background="@drawable/logofinal" />
+                <RelativeLayout android:id="@+id/fullname"
+                    android:layout_marginTop="273dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <View   android:id="@+id/rectangle_4"
+                        android:background="@drawable/rectangle_4_shape"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_width="344dp"
+                        android:layout_height="49dp" />
+
+
+                    <RelativeLayout android:id="@+id/frame_8"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="340dp"
+                        android:text="Email"
+                        android:textColor="#171616" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout android:id="@+id/fullname_ek1"
+                    android:layout_marginTop="345dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <View
+                        android:id="@+id/rectangle_4_ek1"
+                        android:layout_width="344dp"
+                        android:layout_height="49dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/rectangle_4_ek1_shape" />
+
+
+                    <RelativeLayout android:id="@+id/frame_8_ek1"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="314dp"
+                        android:text="Password"
+                        android:textColor="#171616" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout android:id="@+id/pills"
+                    android:layout_marginTop="455dp"
+                    android:layout_marginStart="57dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/fullname_ek1"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="113dp"
+                    android:layout_marginBottom="343dp"
+                    android:text="together"
+                    android:textColor="#Fff6ea"
+                    android:textSize="40dp" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/fullname"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="323dp"
+                    android:layout_marginBottom="91dp"
+                    android:text="Log In"
+                    android:textColor="#151414"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/pills"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="176dp"
+                    android:layout_marginBottom="-228dp"
+                    android:text="" />
+
+                <ImageButton
+                    android:id="@+id/imageButton6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/textView14"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="61dp"
+                    android:layout_marginBottom="186dp"
+                    android:background="@color/white"
+                    app:srcCompat="@drawable/login" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+</HorizontalScrollView>

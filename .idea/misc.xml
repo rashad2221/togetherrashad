@@ -22,20 +22,38 @@
         <entry key="..\:/MEET/app/src/main/res/layout/activity_signin.xml" value="0.25" />
         <entry key="..\:/MEET/app/src/main/res/layout/custom_row.xml" value="0.1" />
         <entry key="..\:/MEET/app/src/main/res/menu/example_menu.xml" value="0.1" />
-        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_about_us.xml" value="0.1" />
-        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_add_elder.xml" value="0.1" />
-        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_adding_events.xml" value="0.11231884057971014" />
+        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/drawable-v24/_bg__about_us_ek2_shape.xml" value="0.1395" />
+        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/drawable-v24/_bg__sign_up1_ek2_shape.xml" value="0.137" />
+        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/drawable-v24/_bg__travel_3_ek2_shape.xml" value="0.1395" />
+        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/drawable-v24/_bg__travel_5_ek2_shape.xml" value="0.1395" />
+        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/drawable-v24/_bg__travel_6_ek2_shape.xml" value="0.1395" />
+        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/drawable-v24/_bg__welcome_page_ek2_shape.xml" value="0.1" />
+        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/drawable-v24/ic_launcher_background.xml" value="0.137" />
+        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/drawable-v24/rectangle_1434_shape.xml" value="0.137" />
+        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/drawable-v24/rectangle_4_ek1_shape.xml" value="0.137" />
+        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/drawable-v24/rectangle_4_ek2_shape.xml" value="0.1395" />
+        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/drawable-v24/rectangle_4_shape.xml" value="0.137" />
+        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/drawable-v24/rectangle_5_shape.xml" value="0.137" />
+        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/drawable/_bg__travel_3_ek2_shape.xml" value="0.1395" />
+        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/drawable/_bg__travel_5_ek2_shape.xml" value="0.1395" />
+        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/drawable/_bg__travel_6_ek2_shape.xml" value="0.1395" />
+        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_about_us.xml" value="0.22" />
+        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_adding_events.xml" value="0.14407866609662248" />
         <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_calendar.xml" value="0.1" />
-        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_choose_user.xml" value="0.10190217391304347" />
-        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_content.xml" value="0.14407866609662248" />
+        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_choose_user.xml" value="0.1" />
+        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_content.xml" value="0.1" />
+        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_day_events.xml" value="0.14407866609662248" />
         <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_day_plans.xml" value="0.1" />
         <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_donation.xml" value="0.14407866609662248" />
-        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_sign_up.xml" value="0.1" />
-        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_sign_up2.xml" value="0.13496376811594202" />
+        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_eldery_sign_up.xml" value="0.14407866609662248" />
+        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_navigation_bar.xml" value="0.14407866609662248" />
+        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_retierment_login.xml" value="0.1" />
+        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_sign_up.xml" value="0.22" />
+        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_sign_up2.xml" value="0.22" />
         <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_sign_up3.xml" value="0.14407866609662248" />
-        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_signin.xml" value="0.161231884057971" />
-        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_teen_hobbies.xml" value="0.10190217391304347" />
+        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_signin.xml" value="0.14666666666666667" />
       </map>
     </option>
   </component>
