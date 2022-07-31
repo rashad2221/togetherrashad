@@ -5,7 +5,7 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-tools:context=".MainActivity"
+tools:context=".AddElder"
 android:orientation="vertical"
 android:gravity="center">
 
@@ -31,7 +31,7 @@ android:gravity="center">
     android:id="@+id/gender"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:hint="Password"
+    android:hint="Gender"
     android:gravity="center"
     android:inputType="textPassword" />
 
@@ -44,53 +44,21 @@ android:gravity="center">
     android:gravity="center"
     android:textColor="@color/black" />
 
-<Button
-android:id="@+id/homework"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:text="Homework" />
-
-<Button
-    android:id="@+id/chess"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Chess" />
-
-<Button
-    android:id="@+id/play_guitar"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Play Guitar" />
-
-<Button
-    android:id="@+id/cooking"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Sign in" />
-
-<Button
-    android:id="@+id/art"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Art" />
-
-<Button
-    android:id="@+id/theater"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Sign in" />
-
-<Button
-    android:id="@+id/writing"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Sign in" />
-
-<Button
-    android:id="@+id/singing"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Sign in" />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RadioButton android:id="@+id/radio_pirates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Homework"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/radio_ninjas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="text12"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
 
 
 <Button

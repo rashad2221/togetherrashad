@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -28,6 +29,7 @@ public class AddElder extends AppCompatActivity implements View.OnClickListener 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_elder);
+        database = FirebaseDatabase.getInstance("https://togethermvp-57663-default-rtdb.firebaseio.com/");
         mDatabase = database.getReference("Elders");
 
         name = findViewById(R.id.name);
@@ -86,6 +88,22 @@ public class AddElder extends AppCompatActivity implements View.OnClickListener 
                     gender.getText().toString(),
                     hobby);
             mDatabase.child(name.getText().toString()).setValue(elder);
+        }
+    }
+    public void onRadioButtonClicked(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch(view.getId()) {
+            case R.id.radio_pirates:
+                if (checked)
+                    // Pirates are the best
+                    break;
+            case R.id.radio_ninjas:
+                if (checked)
+                    // Ninjas rule
+                    break;
         }
     }
 

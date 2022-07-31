@@ -30,7 +30,7 @@ import java.util.Calendar;
 
 public class AddingEvents extends AppCompatActivity implements View.OnClickListener{
     EditText name, date, time, neededNum, description;
-    View signup, add_elder;
+    Button add_elder, signup;
     FirebaseAuth mAuth;
     FirebaseDatabase database;
 
@@ -75,7 +75,7 @@ public class AddingEvents extends AppCompatActivity implements View.OnClickListe
             addEvent();
         }
         else if (view == add_elder) {
-            Intent i = new Intent(this, AddElder.class);
+            Intent i = new Intent(AddingEvents.this, AddElder.class);
             startActivity(i);
         }
     }
