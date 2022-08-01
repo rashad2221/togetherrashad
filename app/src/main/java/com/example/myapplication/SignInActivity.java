@@ -60,7 +60,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
                                     Intent intent = new Intent(SignInActivity.this, NavigationBar.class);
                                     startActivity(intent);
                                 } else {
-                                    Intent intent = new Intent(SignInActivity.this, AddingEvents.class);
+                                    Intent intent = new Intent(SignInActivity.this, NavigationBarElder.class);
                                     startActivity(intent);
 
 

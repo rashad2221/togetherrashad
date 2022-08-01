@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Calendar"
+        android:icon="@drawable/ic_baseline_calendar_today_24"
+        android:id="@+id/calendarElder"/>
+    <item android:title="New Event"
+        android:icon="@drawable/ic_baseline_post_add_24"
+        android:id="@+id/newEvent"/>
+    <item android:title="New Elder"
+        android:icon="@drawable/ic_baseline_person_add_24"
+        android:id="@+id/newElder"/>
+    <item android:title="Elders List"
+        android:icon="@drawable/ic_baseline_format_list_bulleted_24"
+        android:id="@+id/viewElder"/>
+</menu>
