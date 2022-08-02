@@ -23,6 +23,9 @@
         <entry key="..\:/MEET/app/src/main/res/layout/custom_row.xml" value="0.1" />
         <entry key="..\:/MEET/app/src/main/res/menu/example_menu.xml" value="0.1" />
         <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/drawable/_bg__travel_2_ek2_shape.xml" value="0.1" />
+        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/drawable/box_shadow_ek1_shape.xml" value="0.1" />
+        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/drawable/box_shadow_ek2_shape.xml" value="0.1" />
+        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/drawable/box_shadow_shape.xml" value="0.1" />
         <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_about_us.xml" value="0.1" />
         <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_add_elder.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_adding_events.xml" value="0.11231884057971014" />
@@ -33,7 +36,7 @@
         <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_donation.xml" value="0.10666666666666667" />
         <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_elder_menu.xml" value="0.1" />
         <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_eldery_sign_up.xml" value="0.14666666666666667" />
-        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_navigation_bar.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_navigation_bar_elder.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Student/Documents/GitHub/TogetherFinal/app/src/main/res/layout/activity_retierment_login.xml" value="0.22" />
