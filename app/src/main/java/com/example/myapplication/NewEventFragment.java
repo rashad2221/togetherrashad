@@ -5,21 +5,19 @@ import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.icu.text.SimpleDateFormat;
 import android.os.Bundle;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+
 import android.text.InputType;
-import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TimePicker;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -28,25 +26,43 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.Calendar;
 
-public class AddingEvents extends AppCompatActivity implements View.OnClickListener{
+public class NewEventFragment extends Fragment implements View.OnClickListener {
+
     EditText name, date, time, neededNum, description;
     Button add_elder, signup;
     FirebaseAuth mAuth;
     FirebaseDatabase database;
 
+    public NewEventFragment() {
+    }
 
-    protected void onCreate(Bundle savedInstanceState) {
+
+    public static NewEventFragment newInstance() {
+        NewEventFragment fragment = new NewEventFragment();
+        Bundle args = new Bundle();
+
+        return fragment;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_adding_events);
-        name = findViewById(R.id.name);
-        date = findViewById(R.id.date_input);
-        time = findViewById(R.id.time_input);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.fragment_new_event, container, false);
+
+        name = rootView.findViewById(R.id.name);
+        date = rootView.findViewById(R.id.date_input);
+        time = rootView.findViewById(R.id.time_input);
         date.setInputType(InputType.TYPE_NULL);
         time.setInputType(InputType.TYPE_NULL);
-        neededNum = findViewById(R.id.needed);
-        description = findViewById(R.id.description);
-        signup = findViewById(R.id.signup);
-        add_elder = findViewById(R.id.add_elder);
+        neededNum = rootView.findViewById(R.id.needed);
+        description = rootView.findViewById(R.id.description);
+        signup = rootView.findViewById(R.id.signup);
+        add_elder = rootView.findViewById(R.id.add_elder);
         mAuth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance("https://togethermvp-57663-default-rtdb.firebaseio.com/");
         signup.setOnClickListener(this);
@@ -65,9 +81,10 @@ public class AddingEvents extends AppCompatActivity implements View.OnClickListe
                 showTimeDialog(time);
             }
         });
+
+
+        return rootView;
     }
-
-
 
     @Override
     public void onClick(View view) {
@@ -75,7 +92,7 @@ public class AddingEvents extends AppCompatActivity implements View.OnClickListe
             addEvent();
         }
         else if (view == add_elder) {
-            Intent i = new Intent(AddingEvents.this, AddElder.class);
+            Intent i = new Intent(getActivity(), AddElder.class);
             startActivity(i);
         }
     }
@@ -90,7 +107,7 @@ public class AddingEvents extends AppCompatActivity implements View.OnClickListe
                 String[] words = date.getText().toString().split("/");
                 String word = String.join(":", words);
                 database.getReference("Events").child(name.getText().toString()).setValue(event);
-                Intent intent = new Intent(AddingEvents.this, AddingEvents.class);
+                Intent intent = new Intent(getActivity(), NavigationBarElder.class);
                 startActivity(intent);
             }
 
@@ -116,7 +133,7 @@ public class AddingEvents extends AppCompatActivity implements View.OnClickListe
             }
         };
 
-        new DatePickerDialog(AddingEvents.this,dateSetListener,calendar.get(java.util.Calendar.YEAR),calendar.get(java.util.Calendar.MONTH),calendar.get(java.util.Calendar.DAY_OF_MONTH)).show();
+        new DatePickerDialog(getActivity(),dateSetListener,calendar.get(java.util.Calendar.YEAR),calendar.get(java.util.Calendar.MONTH),calendar.get(java.util.Calendar.DAY_OF_MONTH)).show();
     }
 
     private void showTimeDialog(final EditText time_in) {
@@ -132,6 +149,6 @@ public class AddingEvents extends AppCompatActivity implements View.OnClickListe
             }
         };
 
-        new TimePickerDialog(AddingEvents.this,timeSetListener,calendar.get(java.util.Calendar.HOUR_OF_DAY),calendar.get(Calendar.MINUTE),false).show();
+        new TimePickerDialog(getActivity(),timeSetListener,calendar.get(java.util.Calendar.HOUR_OF_DAY),calendar.get(Calendar.MINUTE),false).show();
     }
 }

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewElderFragment">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".AddElder"
+        android:orientation="vertical"
+        android:gravity="center">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign up an Elder\n\n"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:textColor="#520F33" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:gravity="center"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Gender"
+            android:gravity="center"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose your hobby:\n\n"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="@color/black" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton android:id="@+id/homework"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Homework" />
+            <RadioButton android:id="@+id/chess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chess" />
+            <RadioButton android:id="@+id/play_guitar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Play Guitar" />
+            <RadioButton android:id="@+id/cooking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cooking" />
+            <RadioButton android:id="@+id/art"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Art"/>
+            <RadioButton android:id="@+id/theater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Theater" />
+            <RadioButton android:id="@+id/singing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Singing" />
+            <RadioButton android:id="@+id/reading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reading" />
+        </RadioGroup>
+        
+        <Button
+            android:id="@+id/sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign up" />
+    </LinearLayout>
+
+</ScrollView>

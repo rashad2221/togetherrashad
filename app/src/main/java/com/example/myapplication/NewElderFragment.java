@@ -1,42 +1,71 @@
 package com.example.myapplication;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
-public class AddElder extends AppCompatActivity implements View.OnClickListener {
+public class NewElderFragment extends Fragment implements View.OnClickListener{
     EditText name, gender;
     DatabaseReference mDatabase;
     FirebaseDatabase database;
     String hobby;
     Button sign_up;
+    RadioButton homework, chess, guitar, cooking, art, theater, writing, singing, reading;
+
+    public NewElderFragment() {
+    }
+
+    public static NewElderFragment newInstance() {
+        NewElderFragment fragment = new NewElderFragment();
+        Bundle args = new Bundle();
+        return fragment;
+    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_elder);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.fragment_new_elder, container, false);
+
+
         database = FirebaseDatabase.getInstance("https://togethermvp-57663-default-rtdb.firebaseio.com/");
         mDatabase = database.getReference("Elders");
-        name = findViewById(R.id.name);
-        gender = findViewById(R.id.gender);
-        sign_up = findViewById(R.id.sign_up);
+        name = rootView.findViewById(R.id.name);
+        gender = rootView.findViewById(R.id.gender);
+        sign_up = rootView.findViewById(R.id.sign_up);
         sign_up.setOnClickListener(this);
+        homework = rootView.findViewById(R.id.homework);
+        homework.setOnClickListener(this);
+        chess = rootView.findViewById(R.id.chess);
+        chess.setOnClickListener(this);
+        guitar = rootView.findViewById(R.id.play_guitar);
+        guitar.setOnClickListener(this);
+        cooking = rootView.findViewById(R.id.cooking);
+        cooking.setOnClickListener(this);
+        art = rootView.findViewById(R.id.art);
+        art.setOnClickListener(this);
+        theater = rootView.findViewById(R.id.theater);
+        theater.setOnClickListener(this);
+        singing = rootView.findViewById(R.id.singing);
+        singing.setOnClickListener(this);
+        reading = rootView.findViewById(R.id.reading);
+        reading.setOnClickListener(this);
+
+        return  rootView;
 
     }
 
@@ -48,6 +77,9 @@ public class AddElder extends AppCompatActivity implements View.OnClickListener 
                     gender.getText().toString(),
                     hobby);
             mDatabase.child(name.getText().toString()).setValue(elder);
+        }
+        if(view instanceof RadioButton){
+            onRadioButtonClicked(view);
         }
     }
     public void onRadioButtonClicked(View view) {
