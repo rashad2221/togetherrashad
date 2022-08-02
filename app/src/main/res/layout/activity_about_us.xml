@@ -51,8 +51,8 @@
 
     <TextView
         android:id="@+id/textView17"
-        android:layout_width="390dp"
-        android:layout_height="143dp"
+        android:layout_width="392dp"
+        android:layout_height="151dp"
         android:text="Together is an app designed to positively impact the mental health of the elderly. We help teenagers connect with a retirement home and engage in meaningful activities with the elderly. "
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -89,13 +89,12 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="362dp"
-        android:layout_height="272dp"
+        android:layout_width="333dp"
+        android:layout_height="248dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageButton7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView18"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.186"
         app:srcCompat="@drawable/aboutpic" />
 </androidx.constraintlayout.widget.ConstraintLayout>
