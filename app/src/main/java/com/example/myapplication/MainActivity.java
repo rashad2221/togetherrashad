@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         sign_in.setOnClickListener(this);
         about_us = findViewById(R.id.about);
         about_us.setOnClickListener(this);
-        donate = findViewById(R.id.donate);
-        donate.setOnClickListener(this);
+//        donate = findViewById(R.id.donate);
+//        donate.setOnClickListener(this);
 
         //change
     }

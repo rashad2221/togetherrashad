@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,7 +7,6 @@
     tools:context=".AboutUsActivity"
     android:orientation="vertical"
     >
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
@@ -24,14 +23,78 @@
         android:textSize="20sp"
         android:gravity="center"
         android:textColor="@color/black" />
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="150dp"
         android:layout_height="200dp"
         app:srcCompat="@drawable/logo_png" />
+</LinearLayout>-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="261dp"
+        android:layout_height="85dp"
+        android:layout_marginEnd="56dp"
+        android:text="About Us"
+        android:textColor="#6B92E4"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024" />
 
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="392dp"
+        android:layout_height="151dp"
+        android:text="Together is an app designed to positively impact the mental health of the elderly. We help teenagers connect with a retirement home and engage in meaningful activities with the elderly. "
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.761"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView16"
+        app:layout_constraintVertical_bias="0.175" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="370dp"
+        android:layout_height="171dp"
+        android:text="Our team consists of Palestinian and Israeli young adults who work towards witnessing a prosperous future for the elderly and the growth of the youth. As product managers, developers, designers, Uxers, and marketers, we work collectively to make Together as easy, accessible, and effective as possible."
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.39"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView17"
+        app:layout_constraintVertical_bias="0.273" />
 
+    <ImageButton
+        android:id="@+id/imageButton7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        app:layout_constraintVertical_bias="0.962"
+        app:srcCompat="@drawable/goback" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="333dp"
+        android:layout_height="248dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18"
+        app:layout_constraintVertical_bias="0.186"
+        app:srcCompat="@drawable/aboutpic" />
+</androidx.constraintlayout.widget.ConstraintLayout>
