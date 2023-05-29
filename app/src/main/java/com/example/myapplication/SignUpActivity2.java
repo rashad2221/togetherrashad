@@ -1,23 +1,16 @@
 package com.example.myapplication;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -30,20 +23,22 @@ public class SignUpActivity2 extends AppCompatActivity implements AdapterView.On
     DatabaseReference mDatabase;
     FirebaseDatabase database;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_up2);
+        setContentView(R.layout.activity_sign_up_2);
 
         mAuth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance("https://togethermvp-57663-default-rtdb.firebaseio.com/");
         mDatabase = database.getReference("Users");
 
         signup = findViewById(R.id.signup1);
+
         idNum = findViewById(R.id.idNum);
         birthday = findViewById(R.id.birthday);
 
-        spinner = findViewById(R.id.location);
+        spinner = findViewById(R.id.locationsignup);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.locations, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -73,7 +68,7 @@ public class SignUpActivity2 extends AppCompatActivity implements AdapterView.On
                     if (task.isSuccessful()) {
                         // Sign in success, update UI with the signed-in user's information
 
-                        User user = new User(name, email,password, location, ID, phone, birthday);
+                        User user = new User(name, email,password, location);
                         String uid = mAuth.getCurrentUser().getUid();
                         mDatabase.child(uid).setValue(user);
                         Intent intent = new Intent(SignUpActivity2.this, Calendar.class);

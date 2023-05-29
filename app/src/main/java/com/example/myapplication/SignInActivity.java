@@ -52,15 +52,16 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             String uid = mAuth.getCurrentUser().getUid();
+                            Toast.makeText(SignInActivity.this, "succesfull", Toast.LENGTH_SHORT).show();
                             database.getReference("Users").child(uid).addValueEventListener(new ValueEventListener() {
                             @Override
                             public void onDataChange(@NonNull DataSnapshot snapshot) {
                                 User currentUser= snapshot.getValue(User.class);
                                 if (currentUser.getIsTeenager()){
-                                    Intent intent = new Intent(SignInActivity.this, NavigationBar.class);
+                                    Intent intent = new Intent(SignInActivity.this, CalendarFragment.class);
                                     startActivity(intent);
                                 } else {
-                                    Intent intent = new Intent(SignInActivity.this, NavigationBarElder.class);
+                                    Intent intent = new Intent(SignInActivity.this, AddElder.class);
                                     startActivity(intent);
 
 

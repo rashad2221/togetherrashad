@@ -61,7 +61,7 @@ public class NewEventFragment extends Fragment implements View.OnClickListener {
         time.setInputType(InputType.TYPE_NULL);
         neededNum = rootView.findViewById(R.id.needed);
         description = rootView.findViewById(R.id.description);
-        signup = rootView.findViewById(R.id.signup);
+        signup = rootView.findViewById(R.id.signup1);
         add_elder = rootView.findViewById(R.id.add_elder);
         mAuth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance("https://togethermvp-57663-default-rtdb.firebaseio.com/");

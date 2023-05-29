@@ -79,7 +79,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.039"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/mainlogoblu1" />
 
     <ImageView
@@ -91,21 +91,20 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.691"
-        app:srcCompat="@drawable/mainpic"
-        />
+        app:layout_constraintVertical_bias="0.632"
+        app:srcCompat="@drawable/mainpic" />
 
     <ImageButton
         android:id="@+id/sign_in"
         android:layout_width="344dp"
         android:layout_height="53dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="24dp"
         android:background="@color/white"
         android:contentDescription="good"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signup"
+        app:layout_constraintTop_toBottomOf="@+id/signup1"
         app:srcCompat="@drawable/already" />
 
     <ImageButton
@@ -121,7 +120,7 @@
         app:srcCompat="@drawable/about" />
 
     <ImageButton
-        android:id="@+id/signup"
+        android:id="@+id/signup1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/white"
@@ -131,6 +130,6 @@
         app:layout_constraintHorizontal_bias="0.609"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView6"
-        app:layout_constraintVertical_bias="0.614"
+        app:layout_constraintVertical_bias="0.7"
         app:srcCompat="@drawable/started" />
 </androidx.constraintlayout.widget.ConstraintLayout>

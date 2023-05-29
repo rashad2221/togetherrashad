@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "760987154915",
+    "project_id": "togetherschool-1a31d",
+    "storage_bucket": "togetherschool-1a31d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:760987154915:android:96ab48da1a260a9db148d6",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlsZ0GxP0YvKrt_D7OKtPTk-J3Mc7pby4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

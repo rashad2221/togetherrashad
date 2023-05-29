@@ -63,6 +63,7 @@ android:gravity="center">
             android:layout_height="wrap_content"
             android:text="Play Guitar"
             android:onClick="onRadioButtonClicked"/>
+
         <RadioButton android:id="@+id/cooking"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

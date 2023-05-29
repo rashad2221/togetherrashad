@@ -6,20 +6,15 @@ import android.content.Intent;
 import android.icu.text.SimpleDateFormat;
 import android.os.Bundle;
 import android.text.InputType;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TimePicker;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -45,7 +40,7 @@ public class AddingEvents extends AppCompatActivity implements View.OnClickListe
         time.setInputType(InputType.TYPE_NULL);
         neededNum = findViewById(R.id.needed);
         description = findViewById(R.id.description);
-        signup = findViewById(R.id.signup);
+        signup = findViewById(R.id.signup1);
         add_elder = findViewById(R.id.add_elder);
         mAuth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance("https://togethermvp-57663-default-rtdb.firebaseio.com/");
@@ -92,6 +87,7 @@ public class AddingEvents extends AppCompatActivity implements View.OnClickListe
                 database.getReference("Events").child(name.getText().toString()).setValue(event);
                 Intent intent = new Intent(AddingEvents.this, AddingEvents.class);
                 startActivity(intent);
+
             }
 
             @Override

@@ -85,7 +85,7 @@
                     android:layout_height="896dp"
                     android:layout_marginStart="0dp"
                     android:layout_marginTop="0dp"
-                    android:background="@drawable/_bg__travel_5_ek2_shape" />
+                    android:background="@color/white" />
 
                 <View
                     android:id="@+id/passwordBox"
@@ -93,7 +93,7 @@
                     android:layout_height="49dp"
                     android:layout_marginStart="0dp"
                     android:layout_marginTop="8dp"
-                    android:background="@drawable/rectangle_4_ek1_shape" />
+                    android:background="@color/white" />
 
 
                 <EditText
@@ -105,9 +105,12 @@
                     android:layout_marginTop="-4dp"
                     android:layout_marginEnd="6dp"
                     android:layout_marginBottom="115dp"
+                    android:background="@color/white"
                     android:ems="10"
                     android:hint="Email"
-                    android:inputType="textEmailAddress" />
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black" />
 
                 <View
                     android:id="@+id/emailBox2"
@@ -118,7 +121,7 @@
                     android:layout_marginStart="0dp"
                     android:layout_marginTop="22dp"
                     android:layout_marginBottom="-1dp"
-                    android:background="@drawable/rectangle_4_shape" />
+                    android:background="@color/white" />
 
                 <EditText
                     android:id="@+id/password"
@@ -131,7 +134,8 @@
                     android:layout_marginBottom="115dp"
                     android:ems="10"
                     android:hint="Password"
-                    android:inputType="textEmailAddress" />
+                    android:inputType="textEmailAddress"
+                    android:textColorHint="@color/black" />
 
             </RelativeLayout>
 
@@ -173,7 +177,7 @@
                 android:layout_alignBottom="@+id/fullname"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="325dp"
-                android:layout_marginBottom="475dp"
+                android:layout_marginBottom="507dp"
                 android:text="Log In"
                 android:textColor="#151414"
                 android:textSize="20sp" />

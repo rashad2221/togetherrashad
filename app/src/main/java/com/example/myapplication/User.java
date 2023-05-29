@@ -15,7 +15,7 @@ public class User {
     private boolean isTeenager;
 
     // Constructor
-    public User(String name, String email, String password, String location, String idNum, String phoneNum, String birthday) {
+    public User(String name, String email, String password, String location) {
         this.name = name;
         this.email = email;
         this.password = password;

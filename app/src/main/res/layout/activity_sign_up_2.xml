@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/signup"
+            android:layout_width="112dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="259dp"
+            android:layout_marginBottom="21dp"
+            android:text="SignUp"
+            android:textColor="@color/black"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toTopOf="@+id/idNum"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+        <EditText
+            android:id="@+id/idNum"
+            android:layout_width="311dp"
+            android:layout_height="66dp"
+            android:layout_marginStart="39dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="61dp"
+            android:layout_marginBottom="21dp"
+            android:ems="10"
+            android:hint="ID Number"
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toTopOf="@+id/locationsignup"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signup" />
+
+        <Spinner
+            android:id="@+id/locationsignup"
+            android:layout_width="312dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="59dp"
+            android:layout_marginBottom="44dp"
+            app:layout_constraintBottom_toTopOf="@+id/birthday"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/idNum" />
+
+        <EditText
+            android:id="@+id/birthday"
+            android:layout_width="310dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="61dp"
+            android:layout_marginBottom="49dp"
+            android:ems="10"
+            android:hint="Birthday (dd/mm/yy)"
+            android:inputType="date"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/signup1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/locationsignup" />
+
+        <Button
+            android:id="@+id/signup1"
+            android:layout_width="226dp"
+            android:layout_height="74dp"
+            android:layout_marginStart="92dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginEnd="93dp"
+            android:layout_marginBottom="148dp"
+            android:text="sign up"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/birthday" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="78dp"
+            android:layout_height="88dp"
+            android:layout_marginStart="292dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="41dp"
+            android:layout_marginBottom="60dp"
+            app:layout_constraintBottom_toTopOf="@+id/idNum"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/logo_png__1__2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

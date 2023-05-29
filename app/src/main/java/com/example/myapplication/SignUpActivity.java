@@ -36,23 +36,23 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
 
         signup.setOnClickListener(this);
+
     }
 
-    @Override
     public void onClick(View view) {
-        if(view == signup){
+        if(view == signup) {
             Intent i = new Intent(this, SignUpActivity2.class);
             String name = username.getText().toString();
             i.putExtra("username", name);
-            i.putExtra("password",password.getText().toString());
-            i.putExtra("email",email.getText().toString());
-            i.putExtra("phoneNum",phoneNum.getText().toString());
+            i.putExtra("password", password.getText().toString());
+            i.putExtra("email", email.getText().toString());
+            i.putExtra("phoneNum", phoneNum.getText().toString());
             startActivity(i);
-            //createAccount(email.getText().toString(), password.getText().toString() );
         }
+
     }
 
-    /*
+
     public void SendInfo(String email, String password) {
         if(email != null && password != null) {
             Toast.makeText(this, "works h", Toast.LENGTH_LONG).show();
@@ -83,5 +83,5 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                     });
         }
         }
-*/
+
 }

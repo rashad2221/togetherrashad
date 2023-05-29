@@ -50,7 +50,7 @@ public class CalendarFragment extends Fragment {
             public void onSelectedDayChange(@NonNull CalendarView calendarView, int i, int i1, int i2) {
                 String date = i2 + "/" + (i1 + 1) +"/" + i;
                 myDate.setText(date);
-                Intent intent = new Intent(getActivity(), DayEvents.class);
+                Intent intent = new Intent(getContext(), DayEvents.class);
                 intent.putExtra("date", date);
 
                 startActivity(intent);

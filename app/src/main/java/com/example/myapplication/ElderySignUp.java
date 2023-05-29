@@ -2,18 +2,15 @@ package com.example.myapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -38,7 +35,7 @@ public class ElderySignUp extends AppCompatActivity implements View.OnClickListe
         email = findViewById(R.id.email);
         address = findViewById(R.id.address);
         phoneNum = findViewById(R.id.PhoneNum);
-        signup = findViewById(R.id.signup);
+        signup = findViewById(R.id.signup1);
         mAuth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance("https://togethermvp-57663-default-rtdb.firebaseio.com/");
         signup.setOnClickListener(this);

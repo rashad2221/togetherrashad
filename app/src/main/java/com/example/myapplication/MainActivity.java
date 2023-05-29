@@ -12,6 +12,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity implements OnClickListener {
+
     View signup;
     View sign_in;
     View about_us;
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        signup = findViewById(R.id.signup);
+        signup = findViewById(R.id.signup1);
         signup.setOnClickListener(this);
         sign_in = findViewById(R.id.sign_in);
         sign_in.setOnClickListener(this);
